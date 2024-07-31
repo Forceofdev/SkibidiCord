@@ -10,17 +10,17 @@ install node.js, if you don't have it, you won't even be able to unpack the .asa
 
 STEP 2
 go into your discord directory, and locate the desktop-core folder with the core.asar files
-it should be found in the same directory as the executable, in the app-[insert random numbers] folder, then modules
+it should be found in the same directory as the executable, in the `app-[insert random numbers]` folder, then modules
 
 STEP 3 
 unpack the core.asar file
 to do this, you can either install the command-line tools yourself, or you can use npx like i did
 i'd recommend creating a decompiled file, then open up a terminal and head over to the folders location, then run:
-npx @electron/asar core.asar [FOLDER OF CHOICE]
+`npx @electron/asar core.asar [FOLDER OF CHOICE]`
 OR
-npm i -g @electron/asar
+`npm i -g @electron/asar`
 THEN
-asar extract core.asar [FOLDER OF CHOICE]
+`asar extract core.asar [FOLDER OF CHOICE]`
 (i'd recommend the npx approach)
 
 STEP 4
@@ -28,7 +28,7 @@ open up app/mainScreen.js, and locate the the loadMainPage function (if you can'
 then insert the code from this repository
 
 STEP 5
-run npx @electron/asar pack [FOLDER OF CHOICE] core.asar or asar pack [FOLDER OF CHOICE] core.asar
+`run npx @electron/asar pack [FOLDER OF CHOICE] core.asar` or `asar pack [FOLDER OF CHOICE] core.asar`
 beware that you MUST have discord closed (from the task manager level), and also, keep a copy of the original .asar in case you want to revert back to your stable version of discord (or you can simply remove the code)
 
 STEP 6
